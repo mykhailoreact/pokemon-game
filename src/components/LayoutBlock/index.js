@@ -11,22 +11,20 @@ const LayoutBlock = ({title, descr, urlBg = false, colorBg = false}) => {
         inlineStyle.backgroundColor = `${colorBg}`;
     }
 
-    return (
-        <>
-            <section style={inlineStyle} className={s.root}>
-                <div className={s.wrapper}>
-                    <article>
-                        <div className={s.title}>
-                            <h3>{title}</h3>
-                            <span className={s.separator}></span>
-                        </div>
-                        <div className={[s.desc, s.full].join(" ")}>
-                            <p>{descr}</p>
-                        </div>
-                    </article>
-                </div>
-            </section>
-        </>
+    return (  
+        <section style={inlineStyle} className={s.root}>
+            <div className={s.wrapper}>
+                <article>
+                    <div className={s.title}>
+                        <h3>{title}</h3>
+                        <span className={s.separator}></span>
+                    </div>
+                    <div className={[s.desc, s.full].join(" ")}>
+                        <p>{descr}</p>
+                    </div>
+                </article>
+            </div>
+        </section>
     )
 }
 
