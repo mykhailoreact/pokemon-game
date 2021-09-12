@@ -8,7 +8,7 @@ const PokemonCardBlock = ({type, values, img, name, id}) => {
     let [isActive, setActive] = useState(false)
 
     const handleClick = () => {
-        setActive(true);
+        setActive(isActive ? false : true);
     }
     
     return (
