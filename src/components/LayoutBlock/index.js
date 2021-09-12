@@ -1,6 +1,6 @@
 import s from './style.module.css';
 
-const LayoutBlock = ({title, descr, urlBg = false, colorBg = false}) => {
+const LayoutBlock = ({title, descr, urlBg = false, colorBg = false, children = false}) => {
     let inlineStyle = {};
 
     if (urlBg) {
@@ -20,7 +20,7 @@ const LayoutBlock = ({title, descr, urlBg = false, colorBg = false}) => {
                         <span className={s.separator}></span>
                     </div>
                     <div className={[s.desc, s.full].join(" ")}>
-                        <p>{descr}</p>
+                        {children}
                     </div>
                 </article>
             </div>
